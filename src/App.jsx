@@ -5,12 +5,16 @@ import Home from "./components/Home"
 import { useReducer } from "react"
 import userReducer from "./reducers/userReducer"
 import AppContext from "./contexts/AppContext"
+import Settings from "./components/Settings"
 
 const RoutesComp = () => (
     <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home />} />
-        </Routes>
+        <Layout>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/settings" element={<Settings />} />
+            </Routes>
+        </Layout>
     </BrowserRouter>
 )
 
@@ -29,9 +33,7 @@ function App() {
     return (
         <div className="App">
             <AppContext.Provider value={{ globalState, dispatch }}>
-                <Layout>
-                    <RoutesComp />
-                </Layout>
+                <RoutesComp />
             </AppContext.Provider>
         </div>
     )

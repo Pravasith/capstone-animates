@@ -2,7 +2,7 @@ import Feed from "../Feed"
 
 const Home = () => {
     return (
-        <div className="flex-row-center w-full ">
+        <div className="flex-row-center w-full">
             <Feed />
         </div>
     )

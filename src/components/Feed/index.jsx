@@ -15,6 +15,18 @@ const data = [
         image: "https://i.pinimg.com/564x/c3/ba/d9/c3bad915da5c351e78209b0e32ab16e0.jpg",
     },
     {
+        username: "noelleSilva",
+        fullName: "Noelle Silva",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail:
+            "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
+        image: "https://cdn-www.comingsoon.net/assets/uploads/2021/09/onepiece.jpg",
+    },
+    {
         username: "abrahamx",
         fullName: "Abraham X",
         description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -25,6 +37,19 @@ const data = [
         thumbnail: "https://randomuser.me/api/portraits/thumb/men/22.jpg",
         image: "https://thecinemaholic.com/wp-content/uploads/2021/01/nezuu-e1638963260523.jpg",
     },
+    {
+        username: "noelleSilva",
+        fullName: "Noelle Silva",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail:
+            "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
+        image: "https://cdn-www.comingsoon.net/assets/uploads/2021/09/onepiece.jpg",
+    },
+
     {
         username: "Rita",
         fullName: "Rita Grace",
@@ -56,6 +81,18 @@ const data = [
             autem cumque fugit cupiditate reprehenderit laborum vitae
             facilis adipisci!`,
         thumbnail: "https://randomuser.me/api/portraits/thumb/women/14.jpg",
+        image: "https://cdn-www.comingsoon.net/assets/uploads/2021/09/onepiece.jpg",
+    },
+    {
+        username: "noelleSilva",
+        fullName: "Noelle Silva",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail:
+            "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
         image: "https://9tailedkitsune.com/wp-content/uploads/2022/01/marin33.jpg",
     },
 ]

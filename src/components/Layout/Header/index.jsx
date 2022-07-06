@@ -8,6 +8,8 @@ import TextArea from "../../UI/TextArea"
 import { useContext } from "react"
 import AppContext from "../../../contexts/AppContext"
 
+import { Link } from "react-router-dom"
+
 const Header = () => {
     const { globalState } = useContext(AppContext)
 
@@ -40,13 +42,15 @@ const Header = () => {
                 <div className="flex-row-spaced w-full  border-white border-b-2">
                     <div className="flex-row-center w-full">
                         <h3 className="px-4 py-1 hover:underline cursor-pointer">
-                            Home
+                            <Link to="/">{"Home"}</Link>
                         </h3>
+
                         <h3 className="px-4 py-1 hover:underline cursor-pointer">
-                            Settings
+                            <Link to="/settings">{"Settings"}</Link>
                         </h3>
+
                         <h3 className="px-4 py-1 hover:underline cursor-pointer">
-                            Logout
+                            <Link to="/Logout">{"Logout"}</Link>
                         </h3>
                     </div>
                 </div>
