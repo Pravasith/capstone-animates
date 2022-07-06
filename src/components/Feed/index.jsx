@@ -1,44 +1,74 @@
-import Icon from "../UI/Icon"
-
-import Noelle from "../../assets/images/noelle.webp"
-import upload from "../../assets/images/upload.webp"
-import send from "../../assets/images/send.webp"
-
-import TextArea from "../UI/TextArea"
 import Post from "../Post"
 
-const Button = props => {
-    return (
-        <button className="flex-row-center border-2 border-black rounded-full bg-black hover:border-blue-400">
-            {props.iconSrc && (
-                <div className="px-2">
-                    <Icon src={props.iconSrc} size={"sm"} noBackground={true} />
-                </div>
-            )}
-            <div className="pr-4 text-white">{props.text}</div>
-        </button>
-    )
-}
+import PostNew from "../PostNew"
+
+const data = [
+    {
+        username: "Jotaro",
+        fullName: "Jotaro Kujo",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail: "https://randomuser.me/api/portraits/thumb/men/93.jpg",
+        image: "https://i.pinimg.com/564x/c3/ba/d9/c3bad915da5c351e78209b0e32ab16e0.jpg",
+    },
+    {
+        username: "abrahamx",
+        fullName: "Abraham X",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail: "https://randomuser.me/api/portraits/thumb/men/22.jpg",
+        image: "https://thecinemaholic.com/wp-content/uploads/2021/01/nezuu-e1638963260523.jpg",
+    },
+    {
+        username: "Rita",
+        fullName: "Rita Grace",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail: "https://randomuser.me/api/portraits/thumb/women/67.jpg",
+        image: "https://image.shutterstock.com/image-illustration/beautiful-anime-boy-character-background-260nw-1986627173.jpg",
+    },
+    {
+        username: "YK",
+        fullName: "Avie Chan",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail: "https://randomuser.me/api/portraits/thumb/women/23.jpg",
+        image: "https://assets3.thrillist.com/v1/image/2932199/1000x666/flatten;crop;webp=auto;jpeg_quality=60.jpg",
+    },
+    {
+        username: "sakura",
+        fullName: "Useless Sakura",
+        description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laudantium perferendis quisquam voluptates odit molestias
+            tempora neque aspernatur, illo nulla! Temporibus, nobis
+            autem cumque fugit cupiditate reprehenderit laborum vitae
+            facilis adipisci!`,
+        thumbnail: "https://randomuser.me/api/portraits/thumb/women/14.jpg",
+        image: "https://9tailedkitsune.com/wp-content/uploads/2022/01/marin33.jpg",
+    },
+]
 
 const Feed = props => {
     return (
         <div className="h-6 w-1/3  flex-col-north">
-            <div className="flex-row-north w-full border-b-2 border-black">
-                <Icon src={Noelle} />
-                <div className="w-full ml-2 flex-col-north ">
-                    <TextArea placeholder={"What's on your mind?"} />
-                    <div className="w-full flex-row-spaced my-2">
-                        <Button iconSrc={upload} text={"Upload"} />
-                        <Button iconSrc={send} text={"Post"} />
-                    </div>
-                </div>
-            </div>
+            <PostNew />
 
             <div className="flex-col-north">
-                <Post />
-                <Post />
-                <Post />
-                <Post />
+                {data.map((post, i) => (
+                    <Post key={"post" + i} post={post} />
+                ))}
             </div>
         </div>
     )

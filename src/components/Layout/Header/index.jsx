@@ -5,8 +5,12 @@ import noelle from "../../../assets/images/noelle.webp"
 
 import Icon from "../../UI/Icon"
 import TextArea from "../../UI/TextArea"
+import { useContext } from "react"
+import AppContext from "../../../contexts/AppContext"
 
 const Header = () => {
+    const { globalState } = useContext(AppContext)
+
     return (
         <div className="header-container fixed w-full bg-white">
             <div className="flex-col-center w-full">
@@ -26,8 +30,10 @@ const Header = () => {
                     </div>
 
                     <div className="flex-row-center px-4 py-1">
-                        <Icon src={noelle} />
-                        <p className="p-4">Noelle Silva</p>
+                        <Icon src={globalState.userProfile.thumbnail} />
+                        <p className="p-4">
+                            {globalState.userProfile.fullName}
+                        </p>
                     </div>
                 </div>
 
