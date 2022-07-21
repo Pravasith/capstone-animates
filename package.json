@@ -15,9 +15,10 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "node server.js",
+        "del": "rm -r build",
+        "start": "nodemon server.js",
         "dev": "react-scripts start",
-        "build": "react-scripts build",
+        "build": "npm run del && react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
