@@ -13,8 +13,7 @@ pipeline {
         stage("deploy") {
 
             steps {
-                sh 'heroku login'
-                
+                echo 'deploying the app'
             }
         }
     }
