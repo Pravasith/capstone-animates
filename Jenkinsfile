@@ -14,7 +14,7 @@ pipeline {
 
             steps {
                 sh 'heroku login'
-                sh 'git push heroku'
+                
             }
         }
     }
