@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage("build") {
-
-            steps {
-                echo 'building the app'
-            }
-        }
-
         stage("test") {
 
             steps {
@@ -20,7 +13,7 @@ pipeline {
         stage("deploy") {
 
             steps {
-                echo 'deploying the app'
+                sh 'git push heroku main'
             }
         }
     }
