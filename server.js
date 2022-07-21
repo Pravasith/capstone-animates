@@ -6,7 +6,8 @@ console.log(publicPath)
 const port = process.env.PORT || 3000
 app.use(express.static(publicPath))
 app.get("*", (req, res) => {
-    res.sendFile(path.join(publicPath, "index.html"))
+    // res.sendFile(path.join(publicPath, "index.html"))
+    res.send("HELLO: " + publicPath)
 })
 app.listen(port, () => {
     console.log("Server is up and running @" + port)
