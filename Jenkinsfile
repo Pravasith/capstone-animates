@@ -14,6 +14,8 @@ pipeline {
 
             steps {
                 echo 'deploying the app'
+
+                sh 'heroku login'
             }
         }
     }
