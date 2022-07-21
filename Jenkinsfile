@@ -13,6 +13,7 @@ pipeline {
         stage("deploy") {
 
             steps {
+                sh 'heroku login'
                 sh 'git push heroku'
             }
         }
