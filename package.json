@@ -18,7 +18,7 @@
         "del": "rm -r build",
         "start": "nodemon server.js",
         "dev": "react-scripts start",
-        "build": "npm run del && react-scripts build",
+        "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
     },
