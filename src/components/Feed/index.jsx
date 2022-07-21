@@ -24,7 +24,7 @@ const data = [
             facilis adipisci!`,
         thumbnail:
             "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
-        image: "https://cdn-www.comingsoon.net/assets/uploads/2021/09/onepiece.jpg",
+        image: "https://4.bp.blogspot.com/-HpMidnxOryw/T2m5sxRvkzI/AAAAAAAAAGo/uV_32oef80M/s1600/monkey+D+luffy00.jpg",
     },
     {
         username: "abrahamx",
@@ -47,7 +47,7 @@ const data = [
             facilis adipisci!`,
         thumbnail:
             "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
-        image: "https://cdn-www.comingsoon.net/assets/uploads/2021/09/onepiece.jpg",
+        image: "https://4.bp.blogspot.com/-HpMidnxOryw/T2m5sxRvkzI/AAAAAAAAAGo/uV_32oef80M/s1600/monkey+D+luffy00.jpg",
     },
 
     {
@@ -81,7 +81,7 @@ const data = [
             autem cumque fugit cupiditate reprehenderit laborum vitae
             facilis adipisci!`,
         thumbnail: "https://randomuser.me/api/portraits/thumb/women/14.jpg",
-        image: "https://cdn-www.comingsoon.net/assets/uploads/2021/09/onepiece.jpg",
+        image: "https://4.bp.blogspot.com/-HpMidnxOryw/T2m5sxRvkzI/AAAAAAAAAGo/uV_32oef80M/s1600/monkey+D+luffy00.jpg",
     },
     {
         username: "noelleSilva",
