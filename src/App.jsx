@@ -24,7 +24,7 @@ function App() {
             username: "noelleSilva",
             thumbnail:
                 "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
-            fullName: "Noelle Silva",
+            fullName: "NOELLE",
         },
     }
 

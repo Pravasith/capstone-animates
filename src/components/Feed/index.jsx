@@ -16,7 +16,7 @@ const data = [
     },
     {
         username: "noelleSilva",
-        fullName: "Noelle Silva",
+        fullName: "NOELLE",
         description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Laudantium perferendis quisquam voluptates odit molestias
             tempora neque aspernatur, illo nulla! Temporibus, nobis
@@ -39,7 +39,7 @@ const data = [
     },
     {
         username: "noelleSilva",
-        fullName: "Noelle Silva",
+        fullName: "NOELLE",
         description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Laudantium perferendis quisquam voluptates odit molestias
             tempora neque aspernatur, illo nulla! Temporibus, nobis
@@ -85,7 +85,7 @@ const data = [
     },
     {
         username: "noelleSilva",
-        fullName: "Noelle Silva",
+        fullName: "NOELLE",
         description: ` Lorem ipsum dolor sit amet consectetur adipisicing elit.
             Laudantium perferendis quisquam voluptates odit molestias
             tempora neque aspernatur, illo nulla! Temporibus, nobis
