@@ -14,6 +14,7 @@ pipeline {
 
             steps {
                 echo 'deploying the app'
+                sh 'git push heroku main'
             }
         }
     }
