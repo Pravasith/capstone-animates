@@ -1,7 +1,6 @@
 import "./index.css"
 
 import SearchIcon from "../../../assets/images/search.webp"
-import noelle from "../../../assets/images/noelle.webp"
 
 import Icon from "../../UI/Icon"
 import TextArea from "../../UI/TextArea"
