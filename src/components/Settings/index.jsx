@@ -1,4 +1,4 @@
-import { useForm } from "../hooks/useForm"
+import { useForm } from "../../hooks/useForm"
 import Button from "../UI/Button"
 
 const Settings = props => {
