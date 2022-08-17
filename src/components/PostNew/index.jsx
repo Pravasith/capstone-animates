@@ -13,7 +13,7 @@ const PostNew = props => {
 
     return (
         <div className="flex-row-north w-full border-b-2 border-black">
-            <Icon src={globalState.userProfile.thumbnail} />
+            <Icon src={globalState.user.pp} />
             <div className="w-full ml-2 flex-col-north ">
                 <TextArea placeholder={"What's on your mind?"} />
                 <div className="w-full flex-row-spaced my-2">

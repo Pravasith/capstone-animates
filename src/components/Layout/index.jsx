@@ -5,8 +5,10 @@ import "./index.css"
 import { useLocation } from "react-router-dom"
 
 const Layout = props => {
-    const showHeadersAndFooters = !useLocation().pathname.includes(
-        "register" || "login"
+    const loc = useLocation().pathname.toLowerCase()
+
+    const showHeadersAndFooters = !(
+        loc.includes("register") || loc.includes("login")
     )
 
     return (

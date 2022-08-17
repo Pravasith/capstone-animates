@@ -6,11 +6,13 @@ import api from "../../services/api"
 import { API_URLS } from "../../services/routes"
 import Button from "../UI/Button"
 
+import { Link } from "react-router-dom"
+
 const Register = props => {
     const { values, handler } = useForm()
     const [message, setMessage] = useState()
 
-    const { globalState, dispatch } = useContext(AppContext)
+    const { dispatch } = useContext(AppContext)
 
     const validateEmpty = values => {
         if (
@@ -43,13 +45,13 @@ const Register = props => {
                     } else {
                         dispatch({
                             type: "USER_LOGGED_IN",
-                            payload: {
-                                name:
-                                    response.body.firstName +
-                                    " " +
-                                    response.body.lastName,
-                            },
+                            payload:
+                                response.body.firstName +
+                                " " +
+                                response.body.lastName,
                         })
+
+                        window.location.replace("/")
                     }
                 })
                 .catch(err => {
@@ -128,6 +130,10 @@ const Register = props => {
                         </p>
                     )}
                 </form>
+
+                <Link to={"/login"}>
+                    <p>Click here to login if you already have an account</p>
+                </Link>
             </div>
         </div>
     )

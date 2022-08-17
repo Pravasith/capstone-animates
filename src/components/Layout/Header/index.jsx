@@ -38,10 +38,8 @@ const Header = () => {
                     </div>
 
                     <div className="flex-row-center px-4 py-1">
-                        <Icon src={globalState.userProfile.thumbnail} />
-                        <p className="p-4">
-                            {globalState.userProfile.fullName}
-                        </p>
+                        <Icon src={globalState.user.pp} />
+                        <p className="p-4">{globalState.user.name}</p>
                     </div>
                 </div>
 
