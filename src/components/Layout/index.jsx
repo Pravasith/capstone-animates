@@ -1,17 +1,20 @@
 import Footer from "./Footer"
 import Header from "./Header"
-import Login from "../Login"
-import Register from "../Register"
 import "./index.css"
 
+import { useLocation } from "react-router-dom"
+
 const Layout = props => {
+    const showHeadersAndFooters = !useLocation().pathname.includes(
+        "register" || "login"
+    )
+
     return (
         <div className="layout-container">
-            <Header />
+            {showHeadersAndFooters && <Header />}
             <div className="pt-36">{props.children}</div>
-            <Login />
-            <Register />
-            <Footer />
+
+            {showHeadersAndFooters && <Footer />}
         </div>
     )
 }

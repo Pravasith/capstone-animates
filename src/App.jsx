@@ -6,6 +6,8 @@ import { useReducer } from "react"
 import userReducer from "./reducers/userReducer"
 import AppContext from "./contexts/AppContext"
 import Settings from "./components/Settings"
+import Login from "./components/Login"
+import Register from "./components/Register"
 
 const RoutesComp = () => (
     <BrowserRouter>
@@ -13,6 +15,7 @@ const RoutesComp = () => (
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/settings" element={<Settings />} />
+                <Route path="/register" element={<Register />} />
             </Routes>
         </Layout>
     </BrowserRouter>
@@ -20,11 +23,9 @@ const RoutesComp = () => (
 
 function App() {
     const initialState = {
-        userProfile: {
-            username: "noelleSilva",
-            thumbnail:
-                "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
-            fullName: "NOELLE",
+        user: {
+            name: null,
+            pp: "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
         },
     }
 

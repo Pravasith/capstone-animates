@@ -12,18 +12,10 @@ import { Link } from "react-router-dom"
 const Header = () => {
     const { globalState, dispatch } = useContext(AppContext)
 
-    const onLogin = () => {
-        dispatch({ type: "LOGIN_CLICKED", payload: true })
-    }
-
-    const onSignUp = () => {
-        dispatch({ type: "SIGNUP_CLICKED", payload: true })
-    }
-
     const onLogout = () => {
         dispatch({
-            type: "USER_LOGGED_IN",
-            payload: { fullName: "" },
+            type: "USER_LOGGED_OUT",
+            payload: null,
         })
     }
 
@@ -63,30 +55,11 @@ const Header = () => {
                             <Link to="/settings">{"Settings"}</Link>
                         </h3>
 
-                        {!globalState.userProfile.fullName && (
-                            <h3
-                                onClick={
-                                    globalState.userProfile.fullName
-                                        ? onLogout
-                                        : onSignUp
-                                }
-                                className="px-4 py-1 hover:underline cursor-pointer"
-                            >
-                                {"Register"}
-                            </h3>
-                        )}
-
                         <h3
-                            onClick={
-                                globalState.userProfile.fullName
-                                    ? onLogout
-                                    : onLogin
-                            }
+                            onClick={onLogout}
                             className="px-4 py-1 hover:underline cursor-pointer"
                         >
-                            {globalState.userProfile.fullName
-                                ? "Logout"
-                                : "Login"}
+                            {globalState.user.name && "Logout"}
                         </h3>
                     </div>
                 </div>
