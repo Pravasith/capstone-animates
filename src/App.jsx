@@ -23,15 +23,16 @@ const RoutesComp = () => (
 )
 
 function App() {
-    const name = JSON.parse(localStorage.getItem("user"))?.name
-    const pp = JSON.parse(localStorage.getItem("user"))?.pp
+    const user = JSON.parse(localStorage.getItem("user"))
 
     const initialState = {
         user: {
-            name: name,
+            name: user?.name,
+            id: user?.id,
+            email: user?.email,
             pp:
-                pp ||
-                "https://i.pinimg.com/736x/c3/e4/24/c3e424e35083c15a4bd106c46fd051f5.jpg",
+                user?.pp ||
+                "https://res.cloudinary.com/dyvki0hhn/image/upload/v1660778426/user_f4vklt.png",
         },
     }
 

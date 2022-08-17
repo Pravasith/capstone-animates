@@ -3,7 +3,7 @@ import "./index.css"
 import SearchIcon from "../../../assets/images/search.webp"
 
 import Icon from "../../UI/Icon"
-import TextArea from "../../UI/TextArea"
+
 import { useContext } from "react"
 import AppContext from "../../../contexts/AppContext"
 
@@ -17,6 +17,8 @@ const Header = () => {
             type: "USER_LOGGED_OUT",
             payload: null,
         })
+
+        window.location.replace("/login")
     }
 
     return (
@@ -30,7 +32,7 @@ const Header = () => {
                     <div className="flex-row-center px-4 py-1">
                         <Icon src={SearchIcon} />
                         <div className="w-full">
-                            <TextArea
+                            <textarea
                                 rows={1}
                                 placeholder={"What's on your mind?"}
                             />
@@ -38,8 +40,8 @@ const Header = () => {
                     </div>
 
                     <div className="flex-row-center px-4 py-1">
-                        <Icon src={globalState.user.pp} />
-                        <p className="p-4">{globalState.user.name}</p>
+                        <Icon src={globalState.user?.pp} />
+                        <p className="p-4">{globalState.user?.name}</p>
                     </div>
                 </div>
 
@@ -57,7 +59,7 @@ const Header = () => {
                             onClick={onLogout}
                             className="px-4 py-1 hover:underline cursor-pointer"
                         >
-                            {globalState.user.name && "Logout"}
+                            {globalState.user?.name && "Logout"}
                         </h3>
                     </div>
                 </div>

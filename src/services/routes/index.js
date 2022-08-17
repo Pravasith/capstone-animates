@@ -14,4 +14,6 @@ export const BASE_URLS = {
 export const API_URLS = {
     REGISTER_USER: BASE_URLS.USERS + "/register",
     LOGIN: BASE_URLS.USERS + "/login",
+
+    NEW_POST: BASE_URLS.POSTS,
 }

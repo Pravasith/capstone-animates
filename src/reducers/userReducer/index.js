@@ -2,18 +2,26 @@ export const userReducer = (state, action) => {
     const { payload } = action
     switch (action.type) {
         case "USER_LOGGED_IN":
-            localStorage.setItem(
-                "user",
-                JSON.stringify({
-                    name: payload,
-                })
-            )
+            const data = {
+                name: payload.name,
+                email: payload.email,
+                id: payload.id,
+                pp: payload.pp,
+            }
+
+            localStorage.setItem("user", JSON.stringify(data))
 
             return {
                 ...state,
-                user: {
-                    name: payload,
-                },
+                user: data,
+            }
+
+        case "USER_LOGGED_OUT":
+            localStorage.removeItem("user")
+
+            return {
+                ...state,
+                user: null,
             }
 
         default:

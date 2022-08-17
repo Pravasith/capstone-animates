@@ -45,10 +45,15 @@ const Register = props => {
                     } else {
                         dispatch({
                             type: "USER_LOGGED_IN",
-                            payload:
-                                response.body.firstName +
-                                " " +
-                                response.body.lastName,
+                            payload: {
+                                name:
+                                    response.body.firstName +
+                                    " " +
+                                    response.body.lastName,
+                                email: response.body.emailId,
+                                id: response.body._id,
+                                pp: response.body.profilePicture,
+                            },
                         })
 
                         window.location.replace("/")
