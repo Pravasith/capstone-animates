@@ -41,9 +41,26 @@ const POST = (url, data) => {
     })
 }
 
+const PUT = (url, data) => {
+    return new Promise((resolve, reject) => {
+        let responseData
+
+        Axios.put(url, data, requestData)
+            .then(res => {
+                responseData = res.data
+                resolve(responseData)
+            })
+            .catch(e => {
+                console.error(e)
+                reject(e)
+            })
+    })
+}
+
 const api = {
     GET,
     POST,
+    PUT,
 }
 
 export default api

@@ -8,6 +8,7 @@ import AppContext from "./contexts/AppContext"
 import Settings from "./components/Settings"
 import Login from "./components/Login"
 import Register from "./components/Register"
+import Profile from "./components/Profile"
 
 const RoutesComp = () => (
     <BrowserRouter>
@@ -17,6 +18,7 @@ const RoutesComp = () => (
                 <Route path="/settings" element={<Settings />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/user/:id" element={<Profile />} />
             </Routes>
         </Layout>
     </BrowserRouter>
@@ -27,7 +29,8 @@ function App() {
 
     const initialState = {
         user: {
-            name: user?.name,
+            firstName: user?.firstName,
+            lastName: user?.lastName,
             id: user?.id,
             email: user?.email,
             pp:

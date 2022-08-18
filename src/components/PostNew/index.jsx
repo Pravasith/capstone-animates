@@ -14,7 +14,7 @@ import { API_URLS } from "../../services/routes"
 const PostNew = props => {
     const { globalState } = useContext(AppContext)
 
-    const { values, handler } = useForm()
+    const { values, handler } = useForm({})
 
     const [image, setImage] = useState()
 
@@ -22,8 +22,8 @@ const PostNew = props => {
 
     const widget = window.cloudinary.createUploadWidget(
         {
-            cloudName: "dyvki0hhn",
-            uploadPreset: "etu3pxka",
+            cloudName: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
+            uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET,
         },
         (error, result) => {
             if (!error && result && result.event === "success") {
@@ -62,7 +62,15 @@ const PostNew = props => {
 
     return (
         <div className="flex-row-north w-full border-b-2 border-black">
-            <Icon src={globalState.user?.pp} />
+            <div
+                onClick={() => {
+                    window.location.replace("/user/" + globalState.user?.id)
+                }}
+                className="hover:scale-105"
+            >
+                <Icon src={globalState.user?.pp} />
+            </div>
+
             <div className="w-full ml-2 flex-col-north ">
                 <textarea
                     onChange={handler}

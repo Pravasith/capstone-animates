@@ -9,7 +9,7 @@ import Button from "../UI/Button"
 import { Link } from "react-router-dom"
 
 const Register = props => {
-    const { values, handler } = useForm()
+    const { values, handler } = useForm({})
     const [message, setMessage] = useState()
 
     const { dispatch } = useContext(AppContext)
@@ -46,10 +46,8 @@ const Register = props => {
                         dispatch({
                             type: "USER_LOGGED_IN",
                             payload: {
-                                name:
-                                    response.body.firstName +
-                                    " " +
-                                    response.body.lastName,
+                                firstName: response.body.firstName,
+                                lastName: response.body.lastName,
                                 email: response.body.emailId,
                                 id: response.body._id,
                                 pp: response.body.profilePicture,

@@ -25,8 +25,10 @@ const Header = () => {
         <div className="header-container fixed w-full bg-white">
             <div className="flex-col-center w-full">
                 <div className="flex-row-spaced w-full  border-black border-b-2">
-                    <div className="flex-row-center px-4 py-1">
-                        <h3>Animates</h3>
+                    <div className="flex-row-center px-4 py-1 hover:underline">
+                        <Link to={"/"}>
+                            <h3>Animates</h3>
+                        </Link>
                     </div>
 
                     <div className="flex-row-center px-4 py-1">
@@ -41,7 +43,11 @@ const Header = () => {
 
                     <div className="flex-row-center px-4 py-1">
                         <Icon src={globalState.user?.pp} />
-                        <p className="p-4">{globalState.user?.name}</p>
+                        <p className="p-4">
+                            {globalState.user?.firstName +
+                                " " +
+                                globalState.user?.lastName}
+                        </p>
                     </div>
                 </div>
 
@@ -59,7 +65,7 @@ const Header = () => {
                             onClick={onLogout}
                             className="px-4 py-1 hover:underline cursor-pointer"
                         >
-                            {globalState.user?.name && "Logout"}
+                            Logout
                         </h3>
                     </div>
                 </div>

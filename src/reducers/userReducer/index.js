@@ -3,7 +3,8 @@ export const userReducer = (state, action) => {
     switch (action.type) {
         case "USER_LOGGED_IN":
             const data = {
-                name: payload.name,
+                firstName: payload.firstName,
+                lastName: payload.lastName,
                 email: payload.email,
                 id: payload.id,
                 pp: payload.pp,
