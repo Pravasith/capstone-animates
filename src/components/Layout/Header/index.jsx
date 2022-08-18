@@ -31,7 +31,7 @@ const Header = () => {
                         </Link>
                     </div>
 
-                    <div className="flex-row-center px-4 py-1">
+                    {/* <div className="flex-row-center px-4 py-1">
                         <Icon src={SearchIcon} />
                         <div className="w-full">
                             <textarea
@@ -39,16 +39,18 @@ const Header = () => {
                                 placeholder={"What's on your mind?"}
                             />
                         </div>
-                    </div>
+                    </div> */}
 
-                    <div className="flex-row-center px-4 py-1">
-                        <Icon src={globalState.user?.pp} />
-                        <p className="p-4">
-                            {globalState.user?.firstName +
-                                " " +
-                                globalState.user?.lastName}
-                        </p>
-                    </div>
+                    <Link to={"/settings"}>
+                        <div className="flex-row-center px-4 py-1">
+                            <Icon src={globalState.user?.pp} />
+                            <p className="p-4">
+                                {globalState.user?.firstName +
+                                    " " +
+                                    globalState.user?.lastName}
+                            </p>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="flex-row-spaced w-full  border-white border-b-2">

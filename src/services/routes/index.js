@@ -18,6 +18,7 @@ export const API_URLS = {
     UPDATE_USER: BASE_URLS.USERS + "?user_id=",
 
     NEW_POST: BASE_URLS.POSTS,
+    DELETE_POST: BASE_URLS.POSTS + "?user_id=userId&post_id=postId",
     ALL_POSTS: BASE_URLS.POSTS + "/all",
     POSTS_BY_USER: BASE_URLS.POSTS + "?user_id=",
 }

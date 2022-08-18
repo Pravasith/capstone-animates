@@ -13,6 +13,7 @@ const Home = () => {
                 setFeedData(
                     res.body.map(post => {
                         return {
+                            postId: post._id,
                             userId: post.userId,
                             fullName: post.firstName + " " + post.lastName,
                             description: post.description,

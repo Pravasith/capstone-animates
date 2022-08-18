@@ -57,10 +57,27 @@ const PUT = (url, data) => {
     })
 }
 
+const DELETE = (url, data) => {
+    return new Promise((resolve, reject) => {
+        let responseData
+
+        Axios.delete(url, requestData)
+            .then(res => {
+                responseData = res.data
+                resolve(responseData)
+            })
+            .catch(e => {
+                console.error(e)
+                reject(e)
+            })
+    })
+}
+
 const api = {
     GET,
     POST,
     PUT,
+    DELETE,
 }
 
 export default api
