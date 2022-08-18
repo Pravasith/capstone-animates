@@ -1,7 +1,7 @@
-export const DOMAIN = "https://api-animates.herokuapp.com"
-// process.env.NODE_ENV === "production"
-//     ? "https://api-animates.herokuapp.com"
-//     : "http://localhost:8000"
+export const DOMAIN =
+    process.env.NODE_ENV === "production"
+        ? "https://api-animates.herokuapp.com"
+        : "http://localhost:8000"
 
 export const BASE = DOMAIN + "/api/v1"
 

@@ -1,6 +1,6 @@
 import "./App.css"
 import Layout from "./components/Layout"
-import { Routes, Route, BrowserRouter } from "react-router-dom"
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom"
 import Home from "./components/Home"
 import { useReducer } from "react"
 import userReducer from "./reducers/userReducer"
@@ -10,15 +10,28 @@ import Login from "./components/Login"
 import Register from "./components/Register"
 import Profile from "./components/Profile"
 
-const RoutesComp = () => (
+const RoutesComp = props => (
     <BrowserRouter>
         <Layout>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/settings" element={<Settings />} />
+                <Route
+                    path="/"
+                    element={props.user ? <Home /> : <Navigate to="/login" />}
+                />
+                <Route
+                    path="/settings"
+                    element={
+                        props.user ? <Settings /> : <Navigate to="/login" />
+                    }
+                />
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
-                <Route path="/user/:id" element={<Profile />} />
+                <Route
+                    path="/user/:id"
+                    element={
+                        props.user ? <Profile /> : <Navigate to="/login" />
+                    }
+                />
             </Routes>
         </Layout>
     </BrowserRouter>
@@ -44,7 +57,7 @@ function App() {
     return (
         <div className="App">
             <AppContext.Provider value={{ globalState, dispatch }}>
-                <RoutesComp />
+                <RoutesComp user={user} />
             </AppContext.Provider>
         </div>
     )
