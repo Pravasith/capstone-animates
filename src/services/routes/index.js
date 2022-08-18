@@ -16,4 +16,5 @@ export const API_URLS = {
     LOGIN: BASE_URLS.USERS + "/login",
 
     NEW_POST: BASE_URLS.POSTS,
+    ALL_POSTS: BASE_URLS.POSTS + "/all",
 }
